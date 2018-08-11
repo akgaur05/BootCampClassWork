@@ -31,12 +31,6 @@ section {
   width:33%;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 #middle {
   float: left;
   background-color: #888;
