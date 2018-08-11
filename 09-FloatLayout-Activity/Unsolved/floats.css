@@ -8,6 +8,9 @@
 }
 
 body {
+  font-size: 24px;
+  line-height: 32px;
+  color:black;
 }
 
 header {
@@ -18,14 +21,14 @@ header {
 }
 
 section {
+  height: 70px;
+  padding-top: 25px;
 }
 
 #left {
   float: left;
   background-color: #666;
-  height: 70px;
   width:33%;
-  padding-top: 25px;
 }
 
 .clearfix::after {
@@ -37,16 +40,12 @@ section {
 #middle {
   float: left;
   background-color: #888;
-  height: 70px;
   width:33%;
-  padding-top: 25px;
 }
 
 #right {
   float: left;
   background-color: #666;
-  height: 70px;
-  padding-top: 25px;
   width:34%
 }
 
