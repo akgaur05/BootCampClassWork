@@ -45,7 +45,7 @@ section {
 
 #full {
   margin-top: 110px;
-  height: 250px;
+  height: 15.5rem;
   background-color:teal;
   padding-top: 10px;
   clear: both;
@@ -59,7 +59,7 @@ section {
 
 aside {
   float: left;
-  height: 120px;
+  height: 10%;
   padding-top: 100px;
   margin-left: 60px;
   background-color: #fff;

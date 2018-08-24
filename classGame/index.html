@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+</head>
+<body>
+    <script>
+
+    var computerChoice,computerChoiceRandom,userChoiceInput,userChoice;
+
+    //prompts user to choose
+    userChoiceInput= prompt("Choose from Rock,Paper,Scissors,Lizard,Spock.");
+
+    //converted the string in lower case so that it becomes easy to compare with values.
+    //Computer matches case sensitive data.That's why to keep it same ,I have converted users value into lower case
+    
+    userChoice = userChoiceInput.toLowerCase();
+
+    //it will choose from values 0-4
+    computerChoiceRandom=Math.floor(Math.random()*5);  
+    console.log(computerChoiceRandom);
+    
+    //converts random number
+     if(computerChoiceRandom===0){
+        computerChoice = "rock";
+    }else if(computerChoiceRandom===1){
+        computerChoice = "paper";
+    }else if(computerChoiceRandom===2){
+        computerChoice = "scissors";
+    }else if(computerChoiceRandom===3){
+        computerChoice = "lizard";
+    }else {
+        computerChoice = "spock";
+    }
+    console.log(computerChoice);      
+    var result=letsPlay(userChoice,computerChoice);
+    console.log(result);
+    alert(result);
+
+    /* Before writing below logic,I looked out for all the wining cases
+        Scissors – win----Lizard/Paper
+        Paper – win----Rock/Spock
+        Rock – win --- Lizard/Scissors
+        Lizard – win --- Paper/Spock
+        Spock – win ---Rock/Scissors 
+    */
+    function letsPlay(userChoice,computerChoice){
+        if(computerChoice===userChoice){
+            return "It's a tie.";
+        }else if(computerChoice==="scissors" && (userChoice==="lizard"|| userChoice==="paper")){
+            return "Computer Rocks!";
+        }else if(computerChoice==="paper" && (userChoice==="rock"|| userChoice==="spock")){
+            return "Computer Rocks!";
+        }else if(computerChoice==="rock" && (userChoice==="lizard"|| userChoice==="scissors")){
+            return "Computer Rocks!";
+        }else if(computerChoice==="lizard" && (userChoice==="paper"|| userChoice==="spock")){
+            return "Computer Rocks!";
+        }else if(computerChoice==="spock" && (userChoice==="rock"|| userChoice==="scissors")){
+            return "Computer Rocks!";
+        }else{
+            return "You Win!"
+        }
+    }
+    </script>
+</body>
+</html>
